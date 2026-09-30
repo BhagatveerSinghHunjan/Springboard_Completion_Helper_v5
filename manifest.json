@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Springboard Completion Helper",
+  "version": "5.1.1",
+  "description": "Marks Springboard lessons complete only after confirmation is verified, then advances.",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["https://*.onwingspan.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.onwingspan.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Springboard Completion Helper",
+    "default_popup": "popup.html"
+  }
+}
